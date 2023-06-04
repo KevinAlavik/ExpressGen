@@ -4,9 +4,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExpressGen</title>
+    <title>ExpressGen | Express API Generator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/a5ae6c00ff.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Work in progress!</h1>
+    <div class="top">
+        <h1 class="top-title">ExpressGen</h1>
+        <a onclick="switchPage('home')">Home</a>
+        <a onclick="switchPage('new')">New Project</a>
+        <!-- -->
+    </div>
+    <div class="page-container" id="homePage" page="home">
+        <div class="pageTop">
+            <h1>Home</h1>
+            <button><i class="fas fa-plus" style="color: #ffffff;"></i> New Project</button>
+        </div>
+        <div class="project">
+            <!-- <img src="https://picsum.photos/300/200" alt="" class="projectThumbnail"> -->
+            <div class="projectBottom">
+                <p class="projectTitle">Example Project</p>
+                <button onclick="switchPage('example')">Go</button>
+                <button>Export</button>
+            </div>
+        </div>
+    </div>
+    <div class="page-container" id="exampleProjectPage" page="example" style="display:none">
+        <div class="pageTop">
+            <h1>Example Project</h1>
+            <button><i class="fas fa-plus" style="color: #ffffff;"></i> Add Endpoint</button>
+        </div>
+        <div class="action">
+            <div class="actionTop">
+                <p class="actionEndpoint">/</p>
+                <p class="actionType">GET <i class="fas fa-pen-to-square" style="color: #ffffff;"></i></p>
+            </div>
+            <div class="actionBottom">
+                <p>Response</p>
+                <div class="actionResponse">
+                    <p class="type">HTML</p> index.html <i class="fas fa-pen" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="action">
+            <div class="actionTop">
+                <p class="actionEndpoint">/users</p>
+                <p class="actionType">POST <i class="fas fa-pen-to-square" style="color: #ffffff;"></i></p>
+            </div>
+            <div class="actionBottom">
+                <p>Response</p>
+                <div class="actionResponse">
+                    <p class="type">JSON</p> users.json <i class="fas fa-pen" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="pageTop">
+            <h2>Files</h2>
+            <button><i class="fas fa-plus" style="color: #ffffff;"></i> Add File</button>
+        </div>
+        <div class="action">
+            <div class="actionTop">
+                <p class="actionEndpoint">users.json</p>
+                <p class="actionType"><i class="fas fa-pen" style="color: #ffffff;"></i></p>
+            </div>
+            <div class="actionBottom">
+                <div class="actionResponse">
+                    <pre>{
+    "users": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "age": 30,
+        "email": "johndoe@example.com",
+        "address": {
+          "street": "123 Main Street",
+          "city": "New York",
+          "state": "NY",
+          "zipcode": "10001"
+        },
+        "phoneNumbers": [
+          "123-456-7890",
+          "987-654-3210"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "age": 25,
+        "email": "janesmith@example.com",
+        "address": {
+          "street": "456 Elm Street",
+          "city": "San Francisco",
+          "state": "CA",
+          "zipcode": "94101"
+        },
+        "phoneNumbers": [
+          "555-555-5555"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Bob Johnson",
+        "age": 35,
+        "email": "bobjohnson@example.com",
+        "address": {
+          "street": "789 Oak Street",
+          "city": "Chicago",
+          "state": "IL",
+          "zipcode": "60601"
+        },
+        "phoneNumbers": [
+          "111-222-3333",
+          "444-555-6666"
+        ]
+      }
+    ]
+}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-container" id="newProjectPage" page="new" style="display:none">
+        <div class="pageTop">
+            <h1>New Project</h1>
+            <button><i class="fas fa-plus" style="color: #ffffff;"></i> Add Endpoint</button>
+        </div>
+        <div class="pageTop">
+            <h2>Files</h2>
+            <button><i class="fas fa-plus" style="color: #ffffff;"></i> Add File</button>
+        </div>
+    </div>
+    <span class="top-version" id="express-version"></span>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/page-switcher.js"></script>
 </body>
 </html>

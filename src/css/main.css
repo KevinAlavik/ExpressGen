@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #222222;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 0px;
+}
+
+.top {
+  padding: 0px 0px 0px 20px;
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  margin-left: -20px;
+  width: 110vw
+}
+
+.top > a  {
+    padding: 12pt
+}
+
+.top-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.top-version {
+  font-size: 18px;
+}
+
+.page-container {
+    width: 100vw;
+    height: calc(100vh - 70px - 45px);
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    margin-bottom: -2rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 3rem;
+}
+
+.projectThumbnail {
+    border-radius: 10px 10px 0 0;
+}
+
+.projectBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between  ;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.projectBottom > button {
+    margin-left: 5px
+}
+
+a {
+    color: white;
+}
+
+.action {
+    display: flex;
+    background-color: #303030;
+    min-width: 200px;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 12pt;
+    flex-direction: column;
+    /* Remove the fixed height */
+    min-height: auto;
+    /* Remove the max-height property */
+    margin-bottom: 2rem;
+}
+
+
+.actionTop {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.actionResponse {
+    background-color: #222222;
+    padding: 10px;
+    border-radius: 12pt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* Remove the fixed height */
+    height: auto;
+}
+
+
+.actionResponse > .type {
+    background-color: #303030;
+    border-radius: 12pt;
+    height: 3pt;
+    font-size: 11px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+.actionType > .fa-pen-to-square {
+    margin-left: 10px
+}
+
+/* 
+.actionType {
+    margin-right: 3rem;
+} */
+
+.actionResponse > .fa-pen {
+    margin-left: 30px
+}
+
+button {
+    background-color: #303030;
+    border: none;
+    color: white;
+    border-radius: 8pt;
+    height: 24pt;
+    padding: 10px
+}
+
+.pageTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pageTop > button {
+    margin-right: 3rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
